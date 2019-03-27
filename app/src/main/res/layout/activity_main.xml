@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_centerInParent="true"
+                  android:gravity="center"
+                  android:layout_margin="15dp"
+                  android:id="@+id/home_layout" >
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/username"
+                android:ems="10"
+                tools:layout_editor_absoluteY="123dp"
+                tools:layout_editor_absoluteX="85dp"
+                android:id="@+id/username"
+        />
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:ems="10"
+                tools:layout_editor_absoluteY="169dp"
+                tools:layout_editor_absoluteX="85dp"
+                android:id="@+id/password"/>
+        <Button
+                android:text="@string/button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_button"/>
+
+
+    </LinearLayout>
+
+
+    <include
+            android:visibility="gone"
+            layout="@layout/second_activity"
+    />
+</android.support.constraint.ConstraintLayout>

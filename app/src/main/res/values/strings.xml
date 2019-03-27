@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="button_text">Login</string>
+    <string name="users_account">Welcome Admin!</string>
+    <string name="show_toast">Wrong Username or Password!</string>
+</resources>
