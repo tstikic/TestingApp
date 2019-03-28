@@ -12,6 +12,8 @@ import org.junit.Rule
 @RunWith(AndroidJUnit4::class)
 class AppFunctionalityTest {
     val CORRECT_LOGIN_TEXT = "LOGIN"
+    val CORRECT_USERNAME_TEXT = "Username"
+    val CORRECT_PASSWORD_TEXT = "Password"
 
     @Rule
     @JvmField
@@ -22,5 +24,11 @@ class AppFunctionalityTest {
         onView(withId(R.id.login_button)).check(matches(isDisplayed()))
         onView(withId(R.id.login_button)).check(matches(withText(CORRECT_LOGIN_TEXT)))
         onView(withId(R.id.login_button)).check(matches(isClickable()))
+    }
+
+    @Test
+    fun testingCredentials() {
+        onView(withId(R.id.username)).check(matches(withHint(CORRECT_USERNAME_TEXT)))
+        onView(withId(R.id.password)).check(matches(withHint(CORRECT_PASSWORD_TEXT)))
     }
 }
