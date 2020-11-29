@@ -1,51 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/home_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:focusableInTouchMode="true"
         tools:context=".MainActivity">
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical"
-                  android:layout_centerInParent="true"
-                  android:gravity="center"
-                  android:layout_margin="15dp"
-                  android:id="@+id/home_layout" >
+    <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/twintlogo" />
+
+    <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
+            app:errorEnabled="true">
 
         <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="@string/username"
-                android:ems="10"
-                tools:layout_editor_absoluteY="123dp"
-                tools:layout_editor_absoluteX="85dp"
                 android:id="@+id/username"
-        />
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/text_input_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:background="#11000000"
+                android:contentDescription="Username:"
+                android:drawableLeft="@drawable/ic_action_user"
+                android:ems="10"
+                android:hint="Username:"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            app:errorEnabled="true">
 
         <EditText
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/password"
+                android:layout_height="30dp"
+                android:layout_below="@id/username"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="23dp"
+                android:background="#11000000"
+                android:contentDescription="Password:"
+                android:drawableLeft="@drawable/ic_action_pass"
                 android:ems="10"
-                tools:layout_editor_absoluteY="169dp"
-                tools:layout_editor_absoluteX="85dp"
-                android:id="@+id/password"/>
-        <Button
-                android:text="@string/button_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/login_button"/>
+                android:hint="Password:"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp" />
+    </android.support.design.widget.TextInputLayout>
 
+    <Button
+            android:id="@+id/login_button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/text_input_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/round_corners"
+            android:text="Login"
+            android:textColor="#FFFFFF"
 
-    </LinearLayout>
+            />
 
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:text="Login here"
+
+            />
 
     <include
-            android:visibility="gone"
             layout="@layout/second_activity"
-    />
-</android.support.constraint.ConstraintLayout>
+            android:visibility="gone" />
+
+</RelativeLayout>
